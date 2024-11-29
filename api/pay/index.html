@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment API</title>
+</head>
+<body>
+    <script>
+        // Simulate a backend API
+        const handlePayment = (req) => {
+            const { product, amount, currency, address } = req;
+
+            // Basic validation
+            if (!product || !amount || !currency || !address) {
+                return {
+                    success: false,
+                    message: 'All fields are required.'
+                };
+            }
+
+            // Simulate a delay for processing
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    // Simulate a successful payment
+                    resolve({
+                        success: true,
+                        message: 'Payment successful! Your product will be delivered shortly.',
+                        transactionId: 'TX123456789'
+                    });
+                }, 1000);
+            });
+        };
+
+        // Handle incoming POST request
+        const handlePost = async (event) => {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const req = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await handlePayment(req);
+                document.write(JSON.stringify(response));
+            } catch (error) {
+                document.write(JSON.stringify({ success: false, message: 'An error occurred. Please try again later.' }));
+            }
+        };
+
+        // Create a form to simulate POST request
+        const form = document.createElement('form');
+        form.method = 'POST';
+        form.action = '/api/pay';
+        form.innerHTML = `
+            <input type="hidden" name="product" value="Digital Product A">
+            <input type="hidden" name="amount" value="50">
+            <input type="hidden" name="currency" value="ETH">
+            <input type="hidden" name="address" value="0x3A06322e9F1124F6B2de8F343D4FDce4D1009869">
+            <button type="submit" style="display: none;">Submit</button>
+        `;
+        form.addEventListener('submit', handlePost);
+        document.body.appendChild(form);
+        form.submit();
+    </script>
+</body>
+</html>
