@@ -5,211 +5,232 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, viewport-fit=cover">
     
     <!-- Primary Meta Tags -->
-    <title>Scripters — Buy Digital Goods!</title>
-    <meta name="description" content="Ultimate marketplace for secure, instant digital goods transactions using cryptocurrency. Fast, reliable, and user-friendly platform for global digital commerce.">
-    <meta name="keywords" content="digital marketplace, cryptocurrency transactions, digital goods, crypto shop, online trading, instant digital purchases, secure marketplace">
-    <meta name="author" content="Scripters Team">
-    
-    <!-- Geolocation and Language -->
-    <meta name="geo.region" content="Global">
-    <meta name="language" content="en">
-    
-    <!-- Verification Tags -->
-    <meta name="google-site-verification" content="placeholder-verification-code">
+    <title>Scripters — Next-Gen Digital Marketplace</title>
+    <meta name="description" content="Revolutionary platform for secure, instant digital goods transactions using cutting-edge blockchain technology and cryptocurrency payments.">
+    <meta name="keywords" content="digital marketplace, blockchain, cryptocurrency, digital goods, instant transactions, crypto commerce">
     
     <!-- Open Graph / Facebook Meta Tags -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://scripters.vercel.app/">
-    <meta property="og:title" content="Scripters: Revolutionize Digital Goods Transactions">
-    <meta property="og:description" content="Secure, instant cryptocurrency marketplace for digital goods. Buy, sell, and trade with confidence.">
-    <meta property="og:image" content="https://scripters.vercel.app/assets/og-banner.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:site_name" content="Scripters Marketplace">
+    <meta property="og:url" content="https://scripts-shop.vercel.app/">
+    <meta property="og:title" content="Scripters: Revolutionize Digital Commerce">
+    <meta property="og:description" content="Secure, instant cryptocurrency marketplace for digital goods. Buy, sell, and trade with unprecedented ease.">
+    <meta property="og:image" content="https://scripts-shop.vercel.app/og-image.webp">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:domain" content="scripters.vercel.app">
-    <meta name="twitter:url" content="https://scripters.vercel.app/">
-    <meta name="twitter:title" content="Scripters: Digital Goods Marketplace">
-    <meta name="twitter:description" content="Secure, instant cryptocurrency marketplace for digital goods. Buy, sell, and trade with confidence.">
-    <meta name="twitter:image" content="https://scripters.vercel.app/assets/twitter-banner.png">
-    <meta name="twitter:creator" content="@ScriptersMarket">
+    <meta name="twitter:domain" content="scripts-shop.vercel.app">
     
-    <!-- Schema.org Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Scripters Marketplace",
-      "url": "https://scripters.vercel.app/",
-      "description": "Secure cryptocurrency marketplace for digital goods",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://scripters.vercel.app/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      },
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
-      }
-    }
-    </script>
+    <!-- SEO and Performance Optimizations -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@aceternity/ui/dist/tailwind.min.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
     
-    <!-- Canonical and Alternate Links -->
-    <link rel="canonical" href="https://scripters.vercel.app/">
-    <link rel="alternate" hreflang="x-default" href="https://scripters.vercel.app/">
+    <!-- Aceternity UI and Performance Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@aceternity/ui/dist/aceternity.min.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/@aceternity/ui/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
-    <!-- Favicon and Touch Icons -->
-    <link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x 16">
-    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-    
-    <!-- Preload and Prefetch Critical Assets -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Web3 and MetaMask Scripts -->
-    <script src="https://unpkg.com/@metamask/legacy-web3@latest/dist/metamask.web3.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
-    
-    <!-- Custom Animations and Critical CSS -->
+    <!-- Dynamic Image Optimization -->
     <style>
-        body {
-            font-family: 'Be Vietnam Pro', sans-serif;
-            background: linear-gradient(135deg, #3ebcff, #27272a);
-            color: #fff;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
+        /* Optimize image loading and performance */
+        img {
+            content-visibility: auto;
+            contain-intrinsic-size: 1px 1px;
         }
-
-        .container {
-            text-align: center;
-            max-width: 800px;
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        
+        /* Smooth scroll and performance optimizations */
+        html { 
+            scroll-behavior: smooth;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
         }
-
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
+        
+        /* Advanced animations with Aceternity */
+        @keyframes shimmer {
+            0% { background-position: -1000px 0; }
+            100% { background-position: 1000px 0; }
         }
-
-        p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-
-        .btn-primary {
-            background-color: #ff9900;
-            color: white;
-            font-size: 18px;
-            padding: 15px 30px;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .btn-primary:hover {
-            background-color: #e68a00;
-        }
-
-        .features {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 40px;
-        }
-
-        .feature-card {
-            background-color: #3e3e3e;
-            padding: 20px;
-            border-radius: 8px;
-            width: 30%;
-            text-align: center;
-        }
-
-        .feature-card i {
-            font-size: 2.5em;
-            color: #ff9900;
-            margin-bottom: 15px;
-        }
-
-        .feature-card h3 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-
-        .feature-card p {
-            font-size: 1em;
-            color: #ccc;
-        }
-
-        .footer {
-            margin-top: 40px;
-            text-align: center;
-            color: #ccc;
-        }
-
-        .footer a {
-            color: #ff9900;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
+        
+        .shimmer-effect {
+            background: linear-gradient(to right, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%);
+            background-size: 1000px 100%;
+            animation: shimmer 2s infinite linear;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Scripters Marketplace</h1>
-        <p>Secure, instant cryptocurrency transactions for digital goods. Buy, sell, and trade with confidence using BNB, ETH, and other EVM-compatible cryptocurrencies.</p>
-        <a href="https://scripters.vercel.app/payments/crypto/index.html" class="btn-primary">Make a Payment</a>
+<body 
+    x-data="{ 
+        scrolled: false,
+        activeTab: 'features',
+        compareOptions: [
+            { title: 'Scripters', pros: ['Blockchain Security', 'Instant Transactions', 'Global Reach'] },
+            { title: 'Competitors', pros: ['Limited Security', 'Slow Processing', 'Regional Restrictions'] }
+        ]
+    }" 
+    @scroll.window="scrolled = window.pageYOffset > 50"
+    class="bg-gray-50 text-gray-900 antialiased">
+    
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="sr-only focus:not-sr-only absolute top-0 left-0 p-2 bg-blue-600 text-white z-50">
+        Skip to main content
+    </a>
 
-        <div class="features">
-            <div class="feature-card">
-                <i class="fas fa-lock"></i>
-                <h3>Unbreakable Security</h3>
-                <p>Multi-factor authentication and advanced encryption for secure transactions.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-bolt"></i>
-                <h3>Lightning Transactions</h3>
-                <p>Instant processing with zero delays for a seamless user experience.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-users"></i>
-                <h3>Global Community</h3>
-                <p>Connect with digital commerce enthusiasts worldwide.</p>
-            </div>
+    <!-- Animated Header with Aceternity UI -->
+    <header 
+        class="fixed w-full top-0 z-40 transition-all duration-300 ease-in-out"
+        :class="{ 
+            'shadow-md bg-white/90 backdrop-blur-md': scrolled,
+            'bg-transparent': !scrolled
+        }">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center text-2xl font-bold text-blue-800 aceternity-hover-effect">
+                <i class="fas fa-shopping-cart mr-2"></i> Scripters
+            </a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li x-on:click="activeTab = 'features'" :class="{ 'text-blue-600': activeTab === 'features' }">
+                        <a href="#features" class="text-gray-700 hover:text-blue-600 transition">Features</a>
+                    </li>
+                    <li x-on:click="activeTab = 'comparison'" :class="{ 'text-blue-600': activeTab === 'comparison' }">
+                        <a href="#comparison" class="text-gray-700 hover:text-blue-600 transition">Comparison</a>
+                    </li>
+                    <li>
+                        <a href="https://t.me/ScriptsChats" target="_blank" class="text-gray-700 hover:text-blue-600 transition">
+                            <i class="fab fa-telegram mr-1"></i>Community
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <div class="footer">
+    <!-- Main Content with Advanced Aceternity Components -->
+    <main id="main-content" class="pt-20">
+        <!-- Hero Section with Animated Background -->
+        <section class="container mx-auto px-4 py-16 text-center relative aceternity-animated-background">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-5xl font-extrabold text-blue-900 mb-4 aceternity-text-reveal">
+                    Digital Goods Marketplace Reimagined
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 aceternity-fade-in">
+                    Blockchain-Powered. Instant. Secure.
+                </p>
+                <div class="space-x-4">
+                    <a href="#features" class="aceternity-button primary-gradient">
+                        Explore Features
+                    </a>
+                    <a href="#comparison" class="aceternity-button secondary-gradient">
+                        See Comparison
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Content Hub -->
+        <section id="comparison" class="bg-white py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12">
+                    Why Scripters Stands Out
+                </h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <template x-for="(option, index) in compareOptions" :key="index">
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md aceternity-hover-card">
+                            <h3 x-text="option.title" class="text-2xl font-bold mb-4"></h3>
+                            <ul class="space-y-3">
+                                <template x-for="pro in option.pros" :key="pro">
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                                        <span x-text="pro"></span>
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Feature Tabs -->
+        <section id="features" class="bg-gray-100 py-16">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="aceternity-tab-container">
+                        <div class="aceternity-tab-headers">
+                            <button 
+                                @click="activeTab = 'security'" 
+                                :class="{ 'active': activeTab === 'security' }"
+                                class="aceternity-tab-header">
+                                Security
+                            </button>
+                            <button 
+                                @click="activeTab = 'speed'" 
+                                :class="{ 'active': activeTab === 'speed' }"
+                                class="aceternity-tab-header">
+                                Speed
+                            </button>
+                            <button 
+                                @click="activeTab = 'community'" 
+                                :class="{ 'active': activeTab === 'community' }"
+                                class="aceternity-tab-header">
+                                Community
+                            </button>
+                        </div>
+                        <div class="aceternity-tab-content">
+                            <div x-show="activeTab === 'security'" class="aceternity-fade-in">
+                                <h3 class="text-2xl font-bold mb-4">Unbreakable Security</h3>
+                                <p>Military-grade blockchain encryption protecting every transaction.</p>
+                            </div>
+                            <div x-show="activeTab === 'speed'" class="aceternity-fade-in">
+                                <h3 class="text-2xl font-bold mb-4">Lightning-Fast Transactions</h3>
+                                <p>Instant cryptocurrency processing with zero delays.</p>
+                            </div>
+                            <div x-show="activeTab === 'community'" class="aceternity-fade-in">
+                                <h3 class="text-2xl font-bold mb-4">Global Digital Commerce Network</h3>
+                                <p>Connect with digital entrepreneurs worldwide.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer with Social Proof -->
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-4 flex justify-center space-x-4">
+                <div class="aceternity-social-proof-item">
+                    <span class="text-2xl font-bold">500+</span>
+                    <p>Transactions</p>
+                </div>
+                <div class="aceternity-social-proof-item">
+                    <span class="text-2xl font-bold">97%</span>
+                    <p>Customer Satisfaction</p>
+                </div>
+            </div>
             <p>&copy; 2024 Scripters Marketplace. All Rights Reserved.</p>
-            <p><a href="https://scripters.vercel.app/privacy">Privacy Policy</a> | <a href="https://scripters.vercel.app/terms">Terms of Service</a> | <a href="https://t.me/ScriptsChats" target="_blank">Community</a></p>
+            <div class="mt-4 space-x-4">
+                <a href="/privacy" class="text-white hover:text-blue-200">Privacy Policy</a>
+                <a href="/terms" class="text-white hover:text-blue-200">Terms of Service</a>
+                <a href="https://t.me/ScriptsChats" target="_blank" class="text-white hover:text-blue-200">
+                    <i class="fab fa-telegram mr-1"></i>Community
+                </a>
+            </div>
         </div>
-    </div>
+    </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const donateButton = document.querySelector('.btn-primary');
-            donateButton.addEventListener('click', (event) => {
-                event.preventDefault();
-                window.location.href = 'https://scripters.vercel.app/payments/crypto/index.html';
-            });
-        });
-    </script>
+    <!-- People Also Ask Section (Hidden, for SEO) -->
+    <section class="hidden" aria-hidden="true">
+        <h2>People Also Ask</h2>
+        <div itemscope itemtype="https://schema.org/FAQPage">
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">How secure are cryptocurrency transactions?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">Blockchain technology ensures military-grade security for all transactions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
