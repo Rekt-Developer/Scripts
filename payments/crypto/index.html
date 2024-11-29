@@ -1,98 +1,148 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, viewport-fit=cover">
-    
-    <!-- Primary Meta Tags -->
     <title>Scripters — Cryptocurrency Payments</title>
     <meta name="description" content="Secure and instant cryptocurrency payments for digital goods. Buy, sell, and trade with confidence using BNB, ETH, and other EVM-compatible cryptocurrencies.">
     <meta name="keywords" content="cryptocurrency payments, digital goods, BNB, ETH, EVM, secure payments, instant transactions">
     <meta name="author" content="Scripters Team">
-    
-    <!-- Geolocation and Language -->
-    <meta name="geo.region" content="Global">
-    <meta name="language" content="en">
-    
-    <!-- Verification Tags -->
-    <meta name="google-site-verification" content="placeholder-verification-code">
-    
-    <!-- Open Graph / Facebook Meta Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://scripts-shop.vercel.app/payments/crypto/index.html">
-    <meta property="og:title" content="Scripters: Secure Cryptocurrency Payments">
-    <meta property="og:description" content="Secure and instant cryptocurrency payments for digital goods. Buy, sell, and trade with confidence using BNB, ETH, and other EVM-compatible cryptocurrencies.">
-    <meta property="og:image" content="https://scripts-shop.vercel.app/assets/og-banner.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:site_name" content="Scripters Marketplace">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:domain" content="scripts-shop.vercel.app">
-    <meta name="twitter:url" content="https://scripts-shop.vercel.app/payments/crypto/index.html">
-    <meta name="twitter:title" content="Scripters: Secure Cryptocurrency Payments">
-    <meta name="twitter:description" content="Secure and instant cryptocurrency payments for digital goods. Buy, sell, and trade with confidence using BNB, ETH, and other EVM-compatible cryptocurrencies.">
-    <meta name="twitter:image" content="https://scripts-shop.vercel.app/assets/twitter-banner.png">
-    <meta name="twitter:creator" content="@ScriptersMarket">
-    
-    <!-- Schema.org Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Scripters Marketplace",
-      "url": "https://scripts-shop.vercel.app/",
-      "description": "Secure cryptocurrency marketplace for digital goods",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://scripts-shop.vercel.app/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      },
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
-      }
-    }
-    </script>
-    
-    <!-- Canonical and Alternate Links -->
-    <link rel="canonical" href="https://scripts-shop.vercel.app/payments/crypto/index.html">
-    <link rel="alternate" hreflang="x-default" href="https://scripts-shop.vercel.app/payments/crypto/index.html">
-    
-    <!-- Favicon and Touch Icons -->
-    <link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x16">
-    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-    
+
     <!-- Preload and Prefetch Critical Assets -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     
     <!-- Web3 and MetaMask Scripts -->
     <script src="https://unpkg.com/@metamask/legacy-web3@latest/dist/metamask.web3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background: linear-gradient(135deg, #3ebcff, #27272a);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 500px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .product-selection {
+            margin-bottom: 20px;
+        }
+
+        .product-selection select, .product-selection p {
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            color: #fff;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .donation-input {
+            margin-top: 30px;
+        }
+
+        .btn-crypto {
+            background-color: #ff9900;
+            color: white;
+            font-size: 18px;
+            padding: 15px 30px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-crypto:hover {
+            background-color: #e68a00;
+        }
+
+        .message, #countdown {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+
+        .invoice {
+            background-color: #3e3e3e;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .invoice a {
+            color: #3ebcff;
+            text-decoration: none;
+        }
+
+        .invoice h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
-    <div class="btext">
-        <a href="#" class="btneth" id="donateButton">Donate with MetaMask</a>
-        <div class="message"></div>
-        <div id="countdown" style="display: none; margin-top: 20px; color: #3ebcff; font-size: 18px;"></div>
+    <div class="container">
+        <h1>Scripters — Secure Cryptocurrency Payments</h1>
+        <p>Buy digital products using cryptocurrency. Select your preferred crypto, enter the amount, and proceed to payment.</p>
+
+        <!-- Product Selection Section -->
+        <div class="product-selection">
+            <label for="productName">Select Product:</label>
+            <select id="productName">
+                <option value="Digital Product A" data-price="50">Digital Product A - $50</option>
+                <option value="Digital Product B" data-price="100">Digital Product B - $100</option>
+            </select>
+            <p id="productPrice">$50</p>
+        </div>
+
+        <!-- Donation Input Section -->
+        <div class="donation-input">
+            <button class="btn-crypto" id="donateButton">Donate with MetaMask</button>
+            <div class="message"></div>
+            <div id="countdown" style="display: none; margin-top: 20px;"></div>
+        </div>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const donateButton = document.querySelector('.btneth');
+            const donateButton = document.querySelector('#donateButton');
             const messageEl = document.querySelector('.message');
             const countdownEl = document.getElementById('countdown');
+            const productSelect = document.getElementById('productName');
+            const productPrice = document.getElementById('productPrice');
+            
+            // Update product price dynamically
+            productSelect.addEventListener('change', function() {
+                const price = productSelect.selectedOptions[0].getAttribute('data-price');
+                productPrice.innerText = `$${price}`;
+            });
 
             donateButton.addEventListener('click', async function() {
                 if (typeof web3 === 'undefined') {
-                    return renderMessage('<div>You need to install <a href="https://metamask.io">MetaMask</a> to use this feature. <a href="https://metamask.io">https://metamask.io</a></div>');
+                    return renderMessage('<div>You need to install <a href="https://metamask.io">MetaMask</a> to use this feature.</div>');
                 }
 
                 web3 = new Web3(window.ethereum);
@@ -105,6 +155,11 @@
                         renderMessage('Processing your donation...');
                         countdownEl.style.display = 'block';
                         startCountdown(30, () => {
+                            const product = productSelect.value;
+                            const price = productPrice.innerText.substring(1);
+                            const currency = "ETH"; // Extendable for BNB, etc.
+                            
+                            // Send transaction
                             web3.eth.sendTransaction({
                                 to: '0x3A06322e9F1124F6B2de8F343D4FDce4D1009869',
                                 from: userAddress[0],
@@ -113,7 +168,8 @@
                                 if (err) {
                                     renderMessage('There was a problem: ' + err.message);
                                 } else {
-                                    renderMessage('Thanks for the generosity!! Transaction Hash: ' + transactionHash);
+                                    renderMessage(`Thanks for your purchase! Product: ${product}, Amount: ${amount} ${currency}. Transaction Hash: ${transactionHash}`);
+                                    generateInvoice(product, amount, currency, transactionHash);
                                 }
                                 countdownEl.style.display = 'none';
                             });
@@ -141,6 +197,19 @@
                         callback();
                     }
                 }, 1000);
+            }
+
+            function generateInvoice(product, amount, currency, transactionHash) {
+                const invoiceContainer = document.createElement('div');
+                invoiceContainer.className = 'invoice';
+                invoiceContainer.innerHTML = `
+                    <h3>Invoice</h3>
+                    <p><strong>Product Name:</strong> ${product}</p>
+                    <p><strong>Amount Paid:</strong> ${amount} ${currency}</p>
+                    <p><strong>Transaction Hash:</strong> <a href="https://etherscan.io/tx/${transactionHash}" target="_blank">${transactionHash}</a></p>
+                    <p><strong>Status:</strong> Successful</p>
+                `;
+                document.body.appendChild(invoiceContainer);
             }
         });
     </script>
