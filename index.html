@@ -1,98 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Scripts - Simplify your buying experience with a trusted, secure marketplace for digital goods. Seamless cryptocurrency transactions.">
-    <meta name="keywords" content="Scripts, digital goods, cryptocurrency marketplace, secure, reliable, crypto shop">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+    
+    <!-- Primary Meta Tags -->
+    <title>Scripts - Secure Cryptocurrency Marketplace for Digital Goods</title>
+    <meta name="description" content="Scripts: A cutting-edge platform for secure, seamless cryptocurrency transactions of digital goods. Fast, reliable, and user-friendly marketplace.">
+    <meta name="keywords" content="digital marketplace, cryptocurrency shop, secure transactions, digital goods, crypto marketplace, online trading platform">
     <meta name="author" content="Scripts Team">
-    <meta property="og:title" content="Scripts - Simplify Buy and Chats!">
-    <meta property="og:description" content="Trusted marketplace for seamless digital goods transactions using cryptocurrency.">
-    <meta property="og:image" content="assets/images/banner.png">
+    
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
     <meta property="og:url" content="https://scripts-shop.vercel.app/">
+    <meta property="og:title" content="Scripts - Secure Cryptocurrency Marketplace">
+    <meta property="og:description" content="Revolutionize your digital goods transactions with our secure, user-friendly cryptocurrency marketplace.">
+    <meta property="og:image" content="https://scripts-shop.vercel.app/assets/banner-og.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Scripts Marketplace">
+    
+    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-
-    <title>Scripts - Simplify Buy and Chats!</title>
-
+    <meta name="twitter:domain" content="scripts-shop.vercel.app">
+    <meta name="twitter:url" content="https://scripts-shop.vercel.app/">
+    <meta name="twitter:title" content="Scripts - Secure Cryptocurrency Marketplace">
+    <meta name="twitter:description" content="Revolutionize your digital goods transactions with our secure, user-friendly cryptocurrency marketplace.">
+    <meta name="twitter:image" content="https://scripts-shop.vercel.app/assets/banner-twitter.png">
+    
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Scripts Marketplace",
+      "url": "https://scripts-shop.vercel.app/",
+      "description": "A secure platform for cryptocurrency transactions of digital goods",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://scripts-shop.vercel.app/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://scripts-shop.vercel.app/">
+    
+    <!-- Favicon and Touch Icons -->
+    <link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
+    
+    <!-- Robots and Crawling Directives -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <!-- PWA and Mobile Optimization -->
+    <meta name="theme-color" content="#1E3A8A">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom Animations -->
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 font-sans">
-    <!-- Header Section -->
-    <header class="bg-blue-600 text-white py-4">
-        <div class="container mx-auto flex justify-between items-center px-6">
-            <h1 class="text-2xl font-bold">Scripts</h1>
+<body class="bg-gray-50 text-gray-900 antialiased">
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="sr-only focus:not-sr-only absolute top-0 left-0 p-2 bg-blue-600 text-white z-50">
+        Skip to main content
+    </a>
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-40 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center text-2xl font-bold text-blue-800">
+                <i class="fas fa-shopping-cart mr-2"></i> Scripts
+            </a>
             <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="#features" class="hover:underline">Features</a></li>
-                    <li><a href="#about" class="hover:underline">About</a></li>
-                    <li><a href="#contact" class="hover:underline">Contact</a></li>
+                <ul class="flex space-x-6">
+                    <li><a href="#features" class="text-gray-700 hover:text-blue-600 transition">Features</a></li>
+                    <li><a href="#about" class="text-gray-700 hover:text-blue-600 transition">About</a></li>
+                    <li><a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-blue-500 text-white py-20 text-center">
-        <div class="container mx-auto">
-            <h2 class="text-4xl font-extrabold">Simplify Buy and Chats</h2>
-            <p class="mt-4 text-lg">Your trusted marketplace for secure and seamless cryptocurrency transactions.</p>
-            <a href="#features" class="mt-6 inline-block bg-white text-blue-600 font-bold py-2 px-4 rounded-lg shadow hover:bg-gray-200">Explore Now</a>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="py-12 bg-white">
-        <div class="container mx-auto px-6">
-            <h3 class="text-3xl font-bold text-center text-gray-800 mb-6">Features</h3>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center border p-6 rounded-lg shadow">
-                    <i class="fas fa-shield-alt text-4xl text-blue-500 mb-4"></i>
-                    <h4 class="text-xl font-bold">Secure Transactions</h4>
-                    <p class="mt-2 text-gray-600">Your transactions are protected with cutting-edge security protocols.</p>
-                </div>
-                <div class="text-center border p-6 rounded-lg shadow">
-                    <i class="fas fa-wallet text-4xl text-blue-500 mb-4"></i>
-                    <h4 class="text-xl font-bold">Simple Crypto Payments</h4>
-                    <p class="mt-2 text-gray-600">Effortlessly buy and sell digital goods with cryptocurrency.</p>
-                </div>
-                <div class="text-center border p-6 rounded-lg shadow">
-                    <i class="fas fa-users text-4xl text-blue-500 mb-4"></i>
-                    <h4 class="text-xl font-bold">Community Support</h4>
-                    <p class="mt-2 text-gray-600">Join our active community on Telegram to connect and collaborate.</p>
+    <main id="main-content" class="pt-20">
+        <section class="container mx-auto px-4 py-16 text-center">
+            <div class="max-w-3xl mx-auto animate-fade-in-up">
+                <h1 class="text-5xl font-extrabold text-blue-900 mb-4">
+                    Revolutionize Digital Transactions
+                </h1>
+                <p class="text-xl text-gray-600 mb-8">
+                    Secure. Fast. Seamless Cryptocurrency Marketplace for Digital Goods
+                </p>
+                <div class="space-x-4">
+                    <a href="#features" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                        Explore Features
+                    </a>
+                    <a href="#contact" class="bg-gray-200 text-blue-800 px-6 py-3 rounded-lg hover:bg-gray-300 transition">
+                        Contact Us
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-12 bg-gray-100">
-        <div class="container mx-auto px-6 text-center">
-            <h3 class="text-3xl font-bold text-gray-800 mb-6">About Us</h3>
-            <p class="text-gray-600">Scripts is your go-to platform for secure and seamless digital goods transactions. Built with reliability and simplicity in mind, we make cryptocurrency shopping a breeze.</p>
-            <a href="https://t.me/ScriptsChats" class="mt-4 inline-block bg-blue-600 text-white font-bold py-2 px-4 rounded-lg shadow hover:bg-blue-700">Join Us on Telegram</a>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-12 bg-white">
-        <div class="container mx-auto px-6 text-center">
-            <h3 class="text-3xl font-bold text-gray-800 mb-6">Contact Us</h3>
-            <p class="text-gray-600">Have questions or need support? Get in touch with us through our Telegram community or visit our website.</p>
-            <div class="mt-4 space-x-4">
-                <a href="https://scripts-shop.vercel.app/" class="inline-block bg-blue-600 text-white font-bold py-2 px-4 rounded-lg shadow hover:bg-blue-700">Visit Website</a>
-                <a href="https://t.me/ScriptsChats" class="inline-block bg-blue-600 text-white font-bold py-2 px-4 rounded-lg shadow hover:bg-blue-700">Join Telegram</a>
+        <!-- Features Section -->
+        <section id="features" class="bg-white py-16">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-blue-900 mb-4">
+                        Why Choose Scripts?
+                    </h2>
+                    <p class="text-gray-600">
+                        Cutting-edge solutions for secure digital transactions
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                        <i class="fas fa-lock text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Advanced Security</h3>
+                        <p class="text-gray-600">
+                            Military-grade encryption and multi-factor authentication
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                        <i class="fas fa-bolt text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Lightning Fast</h3>
+                        <p class="text-gray-600">
+                            Instant transactions with minimal processing times
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                        <i class="fas fa-users text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Community Driven</h3>
+                        <p class="text-gray-600">
+                            Join a global network of digital commerce enthusiasts
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-4">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2024 Scripts. All rights reserved.</p>
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Scripts Marketplace. All Rights Reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="text-white hover:text-blue-200">Privacy Policy</a>
+                <a href="#" class="text-white hover:text-blue-200">Terms of Service</a>
+                <a href="#" class="text-white hover:text-blue-200">Contact</a>
+            </div>
         </div>
     </footer>
+
+    <!-- Optional: Minimal JavaScript for Interactions -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
