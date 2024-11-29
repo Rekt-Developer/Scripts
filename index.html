@@ -19,10 +19,10 @@
     
     <!-- Open Graph / Facebook Meta Tags -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://scripts-shop.vercel.app/">
+    <meta property="og:url" content="https://scripters.vercel.app/">
     <meta property="og:title" content="Scripters: Revolutionize Digital Goods Transactions">
     <meta property="og:description" content="Secure, instant cryptocurrency marketplace for digital goods. Buy, sell, and trade with confidence.">
-    <meta property="og:image" content="https://scripts-shop.vercel.app/assets/og-banner.png">
+    <meta property="og:image" content="https://scripters.vercel.app/assets/og-banner.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:locale" content="en_US">
@@ -30,11 +30,11 @@
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:domain" content="scripts-shop.vercel.app">
-    <meta name="twitter:url" content="https://scripts-shop.vercel.app/">
+    <meta name="twitter:domain" content="scripters.vercel.app">
+    <meta name="twitter:url" content="https://scripters.vercel.app/">
     <meta name="twitter:title" content="Scripters: Digital Goods Marketplace">
     <meta name="twitter:description" content="Secure, instant cryptocurrency marketplace for digital goods. Buy, sell, and trade with confidence.">
-    <meta name="twitter:image" content="https://scripts-shop.vercel.app/assets/twitter-banner.png">
+    <meta name="twitter:image" content="https://scripters.vercel.app/assets/twitter-banner.png">
     <meta name="twitter:creator" content="@ScriptersMarket">
     
     <!-- Schema.org Markup -->
@@ -43,11 +43,11 @@
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Scripters Marketplace",
-      "url": "https://scripts-shop.vercel.app/",
+      "url": "https://scripters.vercel.app/",
       "description": "Secure cryptocurrency marketplace for digital goods",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://scripts-shop.vercel.app/search?q={search_term_string}",
+        "target": "https://scripters.vercel.app/search?q={search_term_string}",
         "query-input": "required name=search_term_string"
       },
       "offers": {
@@ -59,188 +59,157 @@
     </script>
     
     <!-- Canonical and Alternate Links -->
-    <link rel="canonical" href="https://scripts-shop.vercel.app/">
-    <link rel="alternate" hreflang="x-default" href="https://scripts-shop.vercel.app/">
+    <link rel="canonical" href="https://scripters.vercel.app/">
+    <link rel="alternate" hreflang="x-default" href="https://scripters.vercel.app/">
     
     <!-- Favicon and Touch Icons -->
     <link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x 16">
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
     
     <!-- Preload and Prefetch Critical Assets -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     
-    <!-- Robots and Crawling Directives -->
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
-    
-    <!-- PWA and Mobile Optimization -->
-    <meta name="theme-color" content="#1E3A8A">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
-    <!-- Critical CSS and Performance Libraries -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    
-    <!-- Alpine.js for Interactivity -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Web3 and MetaMask Scripts -->
+    <script src="https://unpkg.com/@metamask/legacy-web3@latest/dist/metamask.web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
     
     <!-- Custom Animations and Critical CSS -->
     <style>
-        @keyframes fadeInUp { 
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background: linear-gradient(135deg, #3ebcff, #27272a);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
         }
-        .animate-fade-in-up {
-            animation: fadeInUp 0.8s ease-out;
+
+        .container {
+            text-align: center;
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
-        /* Smooth scroll and performance optimizations */
-        html { 
-            scroll-behavior: smooth;
-            text-rendering: optimizeLegibility;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #ff9900;
+            color: white;
+            font-size: 18px;
+            padding: 15px 30px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #e68a00;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background-color: #3e3e3e;
+            padding: 20px;
+            border-radius: 8px;
+            width: 30%;
+            text-align: center;
+        }
+
+        .feature-card i {
+            font-size: 2.5em;
+            color: #ff9900;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 1em;
+            color: #ccc;
+        }
+
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #ccc;
+        }
+
+        .footer a {
+            color: #ff9900;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
-<body 
-    x-data="{ scrolled: false }" 
-    @scroll.window="scrolled = window.pageYOffset > 50"
-    class="bg-gray-50 text-gray-900 antialiased">
-    
-    <!-- Accessibility Skip Link -->
-    <a href="#main-content" class="sr-only focus:not-sr-only absolute top-0 left-0 p-2 bg-blue-600 text-white z-50">
-        Skip to main content
-    </a>
+<body>
+    <div class="container">
+        <h1>Scripters Marketplace</h1>
+        <p>Secure, instant cryptocurrency transactions for digital goods. Buy, sell, and trade with confidence using BNB, ETH, and other EVM-compatible cryptocurrencies.</p>
+        <a href="https://scripters.vercel.app/payments/crypto/index.html" class="btn-primary">Make a Payment</a>
 
-    <!-- Header with Alpine.js Dynamic Class -->
-    <header 
-        :class="{ 'shadow-md bg-white/90 backdrop-blur-md': scrolled }"
-        class="fixed w-full top-0 z-40 transition-all duration-300 ease-in-out">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="#" class="flex items-center text-2xl font-bold text-blue-800">
-                <i class="fas fa-shopping-cart mr-2"></i> Scripters
-            </a>
-            <nav>
-                <ul class="flex space-x-6">
-                    <li><a href="#features" class="text-gray-700 hover:text-blue-600 transition">Features</a></li>
-                    <li><a href="#about" class="text-gray-700 hover:text-blue-600 transition">About</a></li>
-                    <li><a href="https://t.me/ScriptsChats" target="_blank" class="text-gray-700 hover:text-blue-600 transition">
-                        <i class="fab fa-telegram mr-1"></i>Community
-                    </a></li>
-                </ul>
-            </nav>
+        <div class="features">
+            <div class="feature-card">
+                <i class="fas fa-lock"></i>
+                <h3>Unbreakable Security</h3>
+                <p>Multi-factor authentication and advanced encryption for secure transactions.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-bolt"></i>
+                <h3>Lightning Transactions</h3>
+                <p>Instant processing with zero delays for a seamless user experience.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-users"></i>
+                <h3>Global Community</h3>
+                <p>Connect with digital commerce enthusiasts worldwide.</p>
+            </div>
         </div>
-    </header>
 
-    <!-- Main Content -->
-    <main id="main-content" class="pt-20">
-        <!-- Hero Section with Alpine.js Interactions -->
-        <section 
-            x-data="{ showCallout: false }" 
-            x-init="setTimeout(() => showCallout = true, 1000)"
-            class="container mx-auto px-4 py-16 text-center">
-            <div class="max-w-3xl mx-auto animate-fade-in-up">
-                <h1 class="text-5xl font-extrabold text-blue-900 mb-4">
-                    Buy Digital Goods Instantly
-                </h1>
-                <p class="text-xl text-gray-600 mb-8">
-                    Secure. Fast. Seamless Cryptocurrency Transactions
-                </p>
-                <div class="space-x-4">
-                    <a href="#features" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-                        Explore Features
-                    </a>
-                    <a href="https://t.me/ScriptsChats" target="_blank" class="bg-gray-200 text-blue-800 px-6 py-3 rounded-lg hover:bg-gray-300 transition">
-                        Join Community
-                    </a>
-                </div>
-                
-                <!-- Dynamic Callout -->
-                <div 
-                    x-show="showCallout"
-                    x-transition
-                    class="mt-8 bg-blue-100 border-l-4 border-blue-500 p-4 rounded">
-                    <p class="text-blue-700">
-                        🎉 New: Instant digital goods delivery powered by blockchain!
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Features Section -->
-        <section id="features" class="bg-white py-16">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold text-blue-900 mb-4">
-                        Why Scripters?
-                    </h2>
-                    <p class="text-gray-600">
-                        Next-generation digital marketplace solutions
-                    </p>
-                </div>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Feature Cards with Hover Effects -->
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
-                        <i class="fas fa-lock text-4xl text-blue-600 mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2">Unbreakable Security</h3>
-                        <p class="text-gray-600">
-                            Military-grade encryption, multi-factor authentication
-                        </p>
-                    </div>
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition                        <i class="fas fa-bolt text-4xl text-blue-600 mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2">Lightning Transactions</h3>
-                        <p class="text-gray-600">
-                            Instant cryptocurrency processing, zero delays
-                        </p>
-                    </div>
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
-                        <i class="fas fa-users text-4xl text-blue-600 mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2">Global Community</h3>
-                        <p class="text-gray-600">
-                            Connect with digital commerce enthusiasts worldwide
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Payment Section -->
-        <section id="payments" class="bg-gray-100 py-16">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold text-blue-900 mb-4">
-                        Secure Cryptocurrency Payments
-                    </h2>
-                    <p class="text-gray-600">
-                        Buy digital goods instantly using BNB, ETH, and other EVM-compatible cryptocurrencies.
-                    </p>
-                </div>
-                <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
-                    <a href="https://scripts-shop.vercel.app/payments/crypto/index.html" class="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition">
-                        Make a Payment
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-blue-900 text-white py-8">
-        <div class="container mx-auto px-4 text-center">
+        <div class="footer">
             <p>&copy; 2024 Scripters Marketplace. All Rights Reserved.</p>
-            <div class="mt-4 space-x-4">
-                <a href="https://scripts-shop.vercel.app/privacy" class="text-white hover:text-blue-200">Privacy Policy</a>
-                <a href="https://scripts-shopvercel.app/terms" class="text-white hover:text-blue-200">Terms of Service</a>
-                <a href="https://t.me/ScriptsChats" target="_blank" class="text-white hover:text-blue-200">
-                    <i class="fab fa-telegram mr-1"></i>Community
-                </a>
-            </div>
+            <p><a href="https://scripters.vercel.app/privacy">Privacy Policy</a> | <a href="https://scripters.vercel.app/terms">Terms of Service</a> | <a href="https://t.me/ScriptsChats" target="_blank">Community</a></p>
         </div>
-    </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const donateButton = document.querySelector('.btn-primary');
+            donateButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                window.location.href = 'https://scripters.vercel.app/payments/crypto/index.html';
+            });
+        });
+    </script>
 </body>
 </html>
