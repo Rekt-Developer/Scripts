@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, viewport-fit=cover">
@@ -68,214 +68,80 @@
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
     
     <!-- Preload and Prefetch Critical Assets -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     
-    <!-- Robots and Crawling Directives -->
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
-    
-    <!-- PWA and Mobile Optimization -->
-    <meta name="theme-color" content="#1E3A8A">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
-    <!-- Critical CSS and Performance Libraries -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" onLogin="handleLogin" />
-    
-    <!-- Alpine.js for Interactivity -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    
-    <!-- Custom Animations and Critical CSS -->
-    <style>
-        @keyframes fadeInUp { 
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in-up {
-            animation: fadeInUp 0.8s ease-out;
-        }
-        /* Smooth scroll and performance optimizations */
-        html { 
-            scroll-behavior: smooth;
-            text-rendering: optimizeLegibility;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-    </style>
+    <!-- Web3 and MetaMask Scripts -->
+    <script src="https://unpkg.com/@metamask/legacy-web3@latest/dist/metamask.web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 </head>
-<body 
-    x-data="{ scrolled: false, showSuccess: false, showError: false, errorMessage: '' }" 
-    @scroll.window="scrolled = window.pageYOffset > 50"
-    class="bg-gray-50 text-gray-900 antialiased">
-    
-    <!-- Accessibility Skip Link -->
-    <a href="#main-content" class="sr-only focus:not-sr-only absolute top-0 left-0 p-2 bg-blue-600 text-white z-50">
-        Skip to main content
-    </a>
+<body>
+    <div class="btext">
+        <a href="#" class="btneth" id="donateButton">Donate with MetaMask</a>
+        <div class="message"></div>
+        <div id="countdown" style="display: none; margin-top: 20px; color: #3ebcff; font-size: 18px;"></div>
+    </div>
 
-    <!-- Header with Alpine.js Dynamic Class -->
-    <header 
-        :class="{ 'shadow-md bg-white/90 backdrop-blur-md': scrolled }"
-        class="fixed w-full top-0 z-40 transition-all duration-300 ease-in-out">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="https://scripts-shop.vercel.app/" class="flex items-center text-2xl font-bold text-blue-800">
-                <i class="fas fa-shopping-cart mr-2"></i> Scripters
-            </a>
-            <nav>
-                <ul class="flex space-x-6">
-                    <li><a href="https://scripts-shop.vercel.app/#features" class="text-gray-700 hover:text-blue-600 transition">Features</a></li>
-                    <li><a href="https://scripts-shop.vercel.app/#about" class="text-gray-700 hover:text-blue-600 transition">About</a></li>
-                    <li><a href="https://t.me/ScriptsChats" target="_blank" class="text-gray-700 hover:text-blue-600 transition">
-                        <i class="fab fa-telegram mr-1"></i>Community
-                    </a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main id="main-content" class="pt-20">
-        <!-- Hero Section with Alpine.js Interactions -->
-        <section 
-            x-data="{ showCallout: false }" 
-            x-init="setTimeout(() => showCallout = true, 1000)"
-            class="container mx-auto px-4 py-16 text-center">
-            <div class="max-w-3xl mx-auto animate-fade-in-up">
-                <h1 class="text-5xl font-extrabold text-blue-900 mb-4">
-                    Secure Cryptocurrency Payments
-                </h1>
-                <p class="text-xl text-gray-600 mb-8">
-                    Buy digital goods instantly using BNB, ETH, and other EVM-compatible cryptocurrencies.
-                </p>
-                <div class="space-x-4">
-                    <a href="#payment-form" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-                        Make a Payment
-                    </a>
-                    <a href="https://t.me/ScriptsChats" target="_blank" class="bg-gray-200 text-blue-800 px-6 py-3 rounded-lg hover:bg-gray-300 transition">
-                        Join Community
-                    </a>
-                </div>
-                
-                <!-- Dynamic Callout -->
-                <div 
-                    x-show="showCallout"
-                    x-transition
-                    class="mt-8 bg-blue-100 border-l-4 border-blue-500 p-4 rounded">
-                    <p class="text-blue-700">
-                        🎉 New: Instant digital goods delivery powered by blockchain!
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Payment Form Section -->
-        <section id="payment-form" class="bg-white py-16">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold text-blue-900 mb-4">
-                        Make a Payment
-                    </h2>
-                    <p class="text-gray-600">
-                        Enter the details to complete your payment.
-                    </p>
-                </div>
-                <div class="max-w-md mx-auto bg-gray-50 p-6 rounded-lg shadow-md">
-                    <form id="payment-form" @submit.prevent="handlePayment">
-                        <div class="mb-4">
-                            <label for="product" class="block text-gray-700 font-bold mb-2">Product</label>
-                            <input type="text" id="product" name="product" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="amount" class="block text-gray-700 font-bold mb-2">Amount</label>
-                            <input type="number" id="amount" name="amount" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="currency" class="block text-gray-700 font-bold mb-2">Currency</label>
-                            <select id="currency" name="currency" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                                <option value="BNB">BNB</option>
-                                <option value="ETH">ETH</option>
-                                <option value="USDT">USDT</option>
-                                <option value="USDC">USDC</option>
-                            </select>
-                        </div>
-                        <div class="mb-4">
-                            <label for="address" class="block text-gray-700 font-bold mb-2">Your Wallet Address</label>
-                            <input type="text" id="address" name="address" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                        </div>
-                        <div class="mb-4">
-                            <button type="submit" class="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition">
-                                Pay Now
-                            </button>
-                        </div>
-                    </form>
-                    <div x-show="showError" x-transition class="mt-4 bg-red-100 border-l-4 border-red-500 p-4 rounded">
-                        <p class="text-red-700">{{ errorMessage }}</p>
-                    </div>
-                    <div x-show="showSuccess" x-transition class="mt-4 bg-green-100 border-l-4 border-green-500 p-4 rounded">
-                        <p class="text-green-700">Payment successful! Your product will be delivered shortly.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-blue-900 text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2024 Scripters Marketplace. All Rights Reserved.</p>
-            <div class="mt-4 space-x-4">
-                <a href="https://scripts-shop.vercel.app/privacy" class="text-white hover:text-blue-200">Privacy Policy</a>
-                <a href="https://scripts-shop.vercel.app/terms" class="text-white hover:text-blue-200">Terms of Service</a>
-                <a href="https://t.me/ScriptsChats" target="_blank" class="text-white hover:text-blue-200">
-                    <i class="fab fa-telegram mr-1"></i>Community
-                </a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Alpine.js for Form Handling -->
     <script>
-        document.addEventListener('alpine:init', () => {
-            Alpine.data('paymentForm', () => ({
-                showSuccess: false,
-                showError: false,
-                errorMessage: '',
+        document.addEventListener('DOMContentLoaded', function() {
+            const donateButton = document.querySelector('.btneth');
+            const messageEl = document.querySelector('.message');
+            const countdownEl = document.getElementById('countdown');
 
-                handlePayment(event) {
-                    const form = event.target;
-                    const formData = new FormData(form);
-
-                    fetch('https://scripts-shop.vercel.app/api/pay', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(Object.fromEntries(formData))
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.success) {
-                            this.showSuccess = true;
-                            this.showError = false;
-                            this.errorMessage = '';
-                            form.reset();
-                        } else {
-                            this.showError = true;
-                            this.showSuccess = false;
-                            this.errorMessage = data.message;
-                        }
-                    })
-                    .catch(error => {
-                        this.showError = true;
-                        this.showSuccess = false;
-                        this.errorMessage = 'An error occurred. Please try again later.';
-                    });
+            donateButton.addEventListener('click', async function() {
+                if (typeof web3 === 'undefined') {
+                    return renderMessage('<div>You need to install <a href="https://metamask.io">MetaMask</a> to use this feature. <a href="https://metamask.io">https://metamask.io</a></div>');
                 }
-            }));
+
+                web3 = new Web3(window.ethereum);
+                try {
+                    await window.ethereum.enable();
+                    const userAddress = await web3.eth.getAccounts();
+                    const amount = prompt("Enter the amount to donate (in ETH):");
+
+                    if (amount && !isNaN(amount) && amount > 0) {
+                        renderMessage('Processing your donation...');
+                        countdownEl.style.display = 'block';
+                        startCountdown(30, () => {
+                            web3.eth.sendTransaction({
+                                to: '0x3A06322e9F1124F6B2de8F343D4FDce4D1009869',
+                                from: userAddress[0],
+                                value: web3.utils.toWei(amount, 'ether')
+                            }, function(err, transactionHash) {
+                                if (err) {
+                                    renderMessage('There was a problem: ' + err.message);
+                                } else {
+                                    renderMessage('Thanks for the generosity!! Transaction Hash: ' + transactionHash);
+                                }
+                                countdownEl.style.display = 'none';
+                            });
+                        });
+                    } else {
+                        renderMessage('Please enter a valid amount.');
+                    }
+                } catch (error) {
+                    console.log(error);
+                    renderMessage('There was a problem: ' + error.message);
+                }
+            });
+
+            function renderMessage(message) {
+                messageEl.innerHTML = message;
+            }
+
+            function startCountdown(seconds, callback) {
+                let remaining = seconds;
+                const interval = setInterval(() => {
+                    countdownEl.textContent = `Processing... ${remaining} seconds remaining`;
+                    remaining--;
+                    if (remaining < 0) {
+                        clearInterval(interval);
+                        callback();
+                    }
+                }, 1000);
+            }
         });
     </script>
 </body>
