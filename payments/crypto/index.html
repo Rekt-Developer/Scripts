@@ -1,127 +1,282 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Scripters - A seamless platform to buy digital goods with cryptocurrency. Join our vibrant community on Telegram and start your journey today!">
-    <meta name="keywords" content="Scripters, cryptocurrency payments, digital goods, secure transactions, blockchain marketplace">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, viewport-fit=cover">
+    
+    <!-- Primary Meta Tags -->
+    <title>Scripters — Cryptocurrency Payments</title>
+    <meta name="description" content="Secure and instant cryptocurrency payments for digital goods. Buy, sell, and trade with confidence using BNB, ETH, and other EVM-compatible cryptocurrencies.">
+    <meta name="keywords" content="cryptocurrency payments, digital goods, BNB, ETH, EVM, secure payments, instant transactions">
     <meta name="author" content="Scripters Team">
-
-    <!-- Open Graph Meta Tags -->
+    
+    <!-- Geolocation and Language -->
+    <meta name="geo.region" content="Global">
+    <meta name="language" content="en">
+    
+    <!-- Verification Tags -->
+    <meta name="google-site-verification" content="placeholder-verification-code">
+    
+    <!-- Open Graph / Facebook Meta Tags -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Scripters - Buy Digital Goods!">
-    <meta property="og:description" content="A seamless platform for cryptocurrency payments. Access digital goods securely and effortlessly.">
-    <meta property="og:image" content="assets/images/crypto-hero.jpg">
-    <meta property="og:url" content="https://scripts-shop.vercel.app/payments/crypto/">
-
+    <meta property="og:url" content="https://scripts-shop.vercel.app/payments/crypto/index.html">
+    <meta property="og:title" content="Scripters: Secure Cryptocurrency Payments">
+    <meta property="og:description" content="Secure and instant cryptocurrency payments for digital goods. Buy, sell, and trade with confidence using BNB, ETH, and other EVM-compatible cryptocurrencies.">
+    <meta property="og:image" content="https://scripts-shop.vercel.app/assets/og-banner.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Scripters Marketplace">
+    
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Scripters - Buy Digital Goods with Crypto!">
-    <meta name="twitter:description" content="Join Scripters and explore seamless cryptocurrency transactions.">
-    <meta name="twitter:image" content="assets/images/crypto-hero.jpg">
-
-    <!-- Additional SEO Tags -->
-    <link rel="canonical" href="https://scripts-shop.vercel.app/payments/crypto/">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#0D6EFD">
-
-    <title>Scripters — Buy Digital Goods!</title>
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Favicon -->
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <meta name="twitter:domain" content="scripts-shop.vercel.app">
+    <meta name="twitter:url" content="https://scripts-shop.vercel.app/payments/crypto/index.html">
+    <meta name="twitter:title" content="Scripters: Secure Cryptocurrency Payments">
+    <meta name="twitter:description" content="Secure and instant cryptocurrency payments for digital goods. Buy, sell, and trade with confidence using BNB, ETH, and other EVM-compatible cryptocurrencies.">
+    <meta name="twitter:image" content="https://scripts-shop.vercel.app/assets/twitter-banner.png">
+    <meta name="twitter:creator" content="@ScriptersMarket">
+    
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Scripters Marketplace",
+      "url": "https://scripts-shop.vercel.app/",
+      "description": "Secure cryptocurrency marketplace for digital goods",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://scripts-shop.vercel.app/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+    
+    <!-- Canonical and Alternate Links -->
+    <link rel="canonical" href="https://scripts-shop.vercel.app/payments/crypto/index.html">
+    <link rel="alternate" hreflang="x-default" href="https://scripts-shop.vercel.app/payments/crypto/index.html">
+    
+    <!-- Favicon and Touch Icons -->
+    <link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    
+    <!-- Preload and Prefetch Critical Assets -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
+    
+    <!-- Robots and Crawling Directives -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
+    
+    <!-- PWA and Mobile Optimization -->
+    <meta name="theme-color" content="#1E3A8A">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Critical CSS and Performance Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" onLogin="handleLogin" />
+    
+    <!-- Alpine.js for Interactivity -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Custom Animations and Critical CSS -->
+    <style>
+        @keyframes fadeInUp { 
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        /* Smooth scroll and performance optimizations */
+        html { 
+            scroll-behavior: smooth;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
 </head>
+<body 
+    x-data="{ scrolled: false, showSuccess: false, showError: false, errorMessage: '' }" 
+    @scroll.window="scrolled = window.pageYOffset > 50"
+    class="bg-gray-50 text-gray-900 antialiased">
+    
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="sr-only focus:not-sr-only absolute top-0 left-0 p-2 bg-blue-600 text-white z-50">
+        Skip to main content
+    </a>
 
-<body class="bg-gray-100 font-sans">
-    <!-- Header -->
-    <header class="bg-blue-700 text-white py-4 shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center px-6">
-            <h1 class="text-2xl font-extrabold">Scripters</h1>
+    <!-- Header with Alpine.js Dynamic Class -->
+    <header 
+        :class="{ 'shadow-md bg-white/90 backdrop-blur-md': scrolled }"
+        class="fixed w-full top-0 z-40 transition-all duration-300 ease-in-out">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="https://scripts-shop.vercel.app/" class="flex items-center text-2xl font-bold text-blue-800">
+                <i class="fas fa-shopping-cart mr-2"></i> Scripters
+            </a>
             <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="#features" class="hover:underline">Features</a></li>
-                    <li><a href="#about" class="hover:underline">About</a></li>
-                    <li><a href="#contact" class="hover:underline">Contact</a></li>
+                <ul class="flex space-x-6">
+                    <li><a href="https://scripts-shop.vercel.app/#features" class="text-gray-700 hover:text-blue-600 transition">Features</a></li>
+                    <li><a href="https://scripts-shop.vercel.app/#about" class="text-gray-700 hover:text-blue-600 transition">About</a></li>
+                    <li><a href="https://t.me/ScriptsChats" target="_blank" class="text-gray-700 hover:text-blue-600 transition">
+                        <i class="fab fa-telegram mr-1"></i>Community
+                    </a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-blue-700 to-blue-500 text-white py-20">
-        <div class="container mx-auto text-center">
-            <h2 class="text-5xl font-extrabold">Buy Digital Goods Effortlessly</h2>
-            <p class="mt-4 text-lg">Pay using BNB, ETH, and other cryptocurrencies with secure, fast, and reliable transactions.</p>
-            <a href="#features" class="mt-6 inline-block bg-white text-blue-700 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-200">Get Started</a>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="py-12 bg-white">
-        <div class="container mx-auto px-6">
-            <h3 class="text-3xl font-bold text-center text-gray-800 mb-8">Why Choose Us?</h3>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center p-6 border rounded-lg shadow">
-                    <i class="fas fa-shield-alt text-4xl text-blue-700 mb-4"></i>
-                    <h4 class="text-xl font-bold">Secure Payments</h4>
-                    <p class="mt-2 text-gray-600">Your transactions are protected with blockchain technology.</p>
+    <!-- Main Content -->
+    <main id="main-content" class="pt-20">
+        <!-- Hero Section with Alpine.js Interactions -->
+        <section 
+            x-data="{ showCallout: false }" 
+            x-init="setTimeout(() => showCallout = true, 1000)"
+            class="container mx-auto px-4 py-16 text-center">
+            <div class="max-w-3xl mx-auto animate-fade-in-up">
+                <h1 class="text-5xl font-extrabold text-blue-900 mb-4">
+                    Secure Cryptocurrency Payments
+                </h1>
+                <p class="text-xl text-gray-600 mb-8">
+                    Buy digital goods instantly using BNB, ETH, and other EVM-compatible cryptocurrencies.
+                </p>
+                <div class="space-x-4">
+                    <a href="#payment-form" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                        Make a Payment
+                    </a>
+                    <a href="https://t.me/ScriptsChats" target="_blank" class="bg-gray-200 text-blue-800 px-6 py-3 rounded-lg hover:bg-gray-300 transition">
+                        Join Community
+                    </a>
                 </div>
-                <div class="text-center p-6 border rounded-lg shadow">
-                    <i class="fas fa-globe text-4xl text-blue-700 mb-4"></i>
-                    <h4 class="text-xl font-bold">Global Access</h4>
-                    <p class="mt-2 text-gray-600">Use multiple cryptocurrencies for transactions worldwide.</p>
-                </div>
-                <div class="text-center p-6 border rounded-lg shadow">
-                    <i class="fas fa-people-arrows text-4xl text-blue-700 mb-4"></i>
-                    <h4 class="text-xl font-bold">Community Driven</h4>
-                    <p class="mt-2 text-gray-600">Join our Telegram community to stay connected and get support.</p>
+                
+                <!-- Dynamic Callout -->
+                <div 
+                    x-show="showCallout"
+                    x-transition
+                    class="mt-8 bg-blue-100 border-l-4 border-blue-500 p-4 rounded">
+                    <p class="text-blue-700">
+                        🎉 New: Instant digital goods delivery powered by blockchain!
+                    </p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-12 bg-gray-100">
-        <div class="container mx-auto px-6 text-center">
-            <h3 class="text-3xl font-bold text-gray-800 mb-6">About Scripters</h3>
-            <p class="text-gray-600">Scripters is the ultimate platform for secure and seamless digital goods transactions. With support for Ethereum (ETH), Binance Smart Chain (BNB), and other cryptocurrencies, we make buying digital goods a breeze.</p>
-            <a href="https://t.me/ScriptsChats" class="mt-4 inline-block bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow hover:bg-blue-800">Join Us on Telegram</a>
-        </div>
-    </section>
-
-    <!-- Payments Section -->
-    <section id="payments" class="py-12 bg-white">
-        <div class="container mx-auto px-6">
-            <h3 class="text-3xl font-bold text-center text-gray-800 mb-8">Make a Payment</h3>
-            <p class="text-center text-gray-600 mb-6">To proceed, use the URL format: <br> <code class="bg-gray-100 text-blue-700 px-2 py-1 rounded">https://scripts-shop.vercel.app/payments/crypto/index.html?pay&bnb=100&products=example.zip</code></p>
-            <div class="text-center">
-                <a href="https://scripts-shop.vercel.app/payments/crypto/" class="inline-block bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-blue-800">Proceed to Payment</a>
+        <!-- Payment Form Section -->
+        <section id="payment-form" class="bg-white py-16">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-blue-900 mb-4">
+                        Make a Payment
+                    </h2>
+                    <p class="text-gray-600">
+                        Enter the details to complete your payment.
+                    </p>
+                </div>
+                <div class="max-w-md mx-auto bg-gray-50 p-6 rounded-lg shadow-md">
+                    <form id="payment-form" @submit.prevent="handlePayment">
+                        <div class="mb-4">
+                            <label for="product" class="block text-gray-700 font-bold mb-2">Product</label>
+                            <input type="text" id="product" name="product" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="amount" class="block text-gray-700 font-bold mb-2">Amount</label>
+                            <input type="number" id="amount" name="amount" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="currency" class="block text-gray-700 font-bold mb-2">Currency</label>
+                            <select id="currency" name="currency" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                <option value="BNB">BNB</option>
+                                <option value="ETH">ETH</option>
+                                <option value="USDT">USDT</option>
+                                <option value="USDC">USDC</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="address" class="block text-gray-700 font-bold mb-2">Your Wallet Address</label>
+                            <input type="text" id="address" name="address" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div class="mb-4">
+                            <button type="submit" class="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition">
+                                Pay Now
+                            </button>
+                        </div>
+                    </form>
+                    <div x-show="showError" x-transition class="mt-4 bg-red-100 border-l-4 border-red-500 p-4 rounded">
+                        <p class="text-red-700">{{ errorMessage }}</p>
+                    </div>
+                    <div x-show="showSuccess" x-transition class="mt-4 bg-green-100 border-l-4 border-green-500 p-4 rounded">
+                        <p class="text-green-700">Payment successful! Your product will be delivered shortly.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-12 bg-gray-100">
-        <div class="container mx-auto px-6 text-center">
-            <h3 class="text-3xl font-bold text-gray-800 mb-6">Contact Us</h3>
-            <p class="text-gray-600">Have questions? Join our Telegram community or reach out through our website.</p>
-            <div class="mt-4 space-x-4">
-                <a href="https://scripts-shop.vercel.app/" class="inline-block bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow hover:bg-blue-800">Visit Website</a>
-                <a href="https://t.me/ScriptsChats" class="inline-block bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow hover:bg-blue-800">Join Telegram</a>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-6">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2024 Scripters. All rights reserved.</p>
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Scripters Marketplace. All Rights Reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="https://scripts-shop.vercel.app/privacy" class="text-white hover:text-blue-200">Privacy Policy</a>
+                <a href="https://scripts-shop.vercel.app/terms" class="text-white hover:text-blue-200">Terms of Service</a>
+                <a href="https://t.me/ScriptsChats" target="_blank" class="text-white hover:text-blue-200">
+                    <i class="fab fa-telegram mr-1"></i>Community
+                </a>
+            </div>
         </div>
     </footer>
-</body>
 
+    <!-- Alpine.js for Form Handling -->
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('paymentForm', () => ({
+                showSuccess: false,
+                showError: false,
+                errorMessage: '',
+
+                handlePayment(event) {
+                    const form = event.target;
+                    const formData = new FormData(form);
+
+                    fetch('https://scripts-shop.vercel.app/api/pay', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(Object.fromEntries(formData))
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            this.showSuccess = true;
+                            this.showError = false;
+                            this.errorMessage = '';
+                            form.reset();
+                        } else {
+                            this.showError = true;
+                            this.showSuccess = false;
+                            this.errorMessage = data.message;
+                        }
+                    })
+                    .catch(error => {
+                        this.showError = true;
+                        this.showSuccess = false;
+                        this.errorMessage = 'An error occurred. Please try again later.';
+                    });
+                }
+            }));
+        });
+    </script>
+</body>
 </html>
